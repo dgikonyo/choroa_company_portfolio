@@ -1,0 +1,26 @@
+/**
+Pages in their hierarchy
+app_layout
+    Navbar
+    Homepage
+    Portfolio
+    ContactUs
+    CompanyPortfolio
+    CompanyTeam
+
+    Font: Courier New
+    Background color: #e2e8f0
+    Font-color: black
+*/
+
+#app_layout {
+    background-color: #e2e8f0;
+
+
+}
+#navbar {}
+#homepage{}
+#portfolio{}
+#contact-us{}
+#company-portfolio{}
+#company-team{}
