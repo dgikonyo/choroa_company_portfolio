@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from '../styles/style.module.css'
+import styles from "../styles/style.module.css";
 
 export default function HomePage() {
   return (
@@ -14,6 +14,20 @@ export default function HomePage() {
             </div>
           </header>
           <div className="row">
+            <div className="col-md">
+              <Link
+                className="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                href="/about-us.html"
+              >
+                <span className="navbar-toggler-icon"></span>DISCUSS THE PROJECT
+              </Link>
+            </div>
             <div className="col-md">
               <Link
                 className="navbar-toggler"
