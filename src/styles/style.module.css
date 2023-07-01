@@ -13,14 +13,27 @@ app_layout
     Font-color: black
 */
 
-#app_layout {
+.main {
     background-color: #e2e8f0;
-
-
+    padding: 0;
+    margin: 0 auto;
 }
-#navbar {}
-#homepage{}
-#portfolio{}
-#contact-us{}
-#company-portfolio{}
-#company-team{}
+
+.navbar,
+.main,
+.footer {
+    max-width: 1000px;
+}
+
+.navbar {
+    padding-bottom: 4rem;
+}
+
+.homePage {
+    /* padding-top: 4rem; */
+}
+
+#portfolio,
+.card {
+    width: 18rem;
+}

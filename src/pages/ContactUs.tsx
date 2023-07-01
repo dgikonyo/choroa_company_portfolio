@@ -1,6 +1,8 @@
+import styles from '../styles/style.module.css'
+
 export default function ContactUs() {
     return (
-        <section id="contact-us">
+        <section className={styles.contactUs}>
             <header className="jumbotron">
                 <div className="container">
                     <h1 className="display-3">CONTACT US</h1>
@@ -13,7 +15,6 @@ export default function ContactUs() {
                                         <input type="text" id="disabledTextInput" className="form-control" placeholder="Full Name"
                                             required />
                                     </div>
-
                                     <div className="mb-3">
                                         <input type="text" id="disabledTextInput" className="form-control" placeholder="Email"
                                             required />
@@ -32,7 +33,6 @@ export default function ContactUs() {
                                 </fieldset>
                             </form>
                         </div>
-
                         <div className="col-md-4">
                             <div>
                                 <h3>LOCATION</h3>
@@ -45,7 +45,6 @@ export default function ContactUs() {
                                 <p>07** *** ***</p>
                             </div>
                         </div>
-
                         <div className="col-md-4">
                             <div>
                                 <h3>EMAIL</h3>
@@ -60,7 +59,6 @@ export default function ContactUs() {
                             </div>
                         </div>
                     </div>
-
                     <div className="row">
                         <div className="col-md-2">
                             <a className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

@@ -1,6 +1,8 @@
+import styles from '../styles/style.module.css'
+
 export default function CompanyTeam() {
     return (
-        <section id="out-team">
+        <section className={styles.companyTeam}>
             <header className="jumbotron">
                 <div className="container">
                     <h1 className="display-3">OUR TEAM</h1>
@@ -8,7 +10,6 @@ export default function CompanyTeam() {
 
                         <p className="lead pb-4">for we are the many</p>
                     </div>
-
                     <div className="row">
                         <div className="col-md-2">
                             <a className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

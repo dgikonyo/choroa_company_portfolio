@@ -1,39 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from '../styles/style.module.css'
 
 export default function Portfolio() {
     return (
-        <section id="portfolio">
+        <section className={styles.portfolio}>
             <header className="jumbotron">
                 <div className="container">
                     <h1 className="display-3">WHAT WE DO</h1>
                     <div className="row">
                         <div className="col-mb-auto card">
                             <Image src="/img/hero-image.webp" className="card-img-top" alt="..."></Image>
-                                <div className="card-body">
-                                    <p className="card-text">BRANDING</p>
-                                </div>
+                            <div className="card-body">
+                                <p className="card-text">BRANDING</p>
+                            </div>
                         </div>
 
                         <div className="col-mb-auto card">
                             <Image src="/img/hero-image.webp" className="card-img-top" alt="..."></Image>
-                                <div className="card-body">
-                                    <p className="card-text">GRAPHIC DESIGN</p>
-                                </div>
+                            <div className="card-body">
+                                <p className="card-text">GRAPHIC DESIGN</p>
+                            </div>
                         </div>
 
                         <div className="col-mb-auto card">
                             <Image src="/img/hero-image.webp" className="card-img-top" alt="..."></Image>
-                                <div className="card-body">
-                                    <p className="card-text">3D DESIGN</p>
-                                </div>
+                            <div className="card-body">
+                                <p className="card-text">3D DESIGN</p>
+                            </div>
                         </div>
 
                         <div className="col-mb-auto card">
                             <Image src="/img/hero-image.webp" className="card-img-top" alt="..."></Image>
-                                <div className="card-body">
-                                    <p className="card-text">UI/UX DESIGN</p>
-                                </div>
+                            <div className="card-body">
+                                <p className="card-text">UI/UX DESIGN</p>
+                            </div>
                         </div>
                     </div>
 

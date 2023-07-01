@@ -1,17 +1,10 @@
-// import Image from 'next/image'
-//import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
 import HomePage from '@/pages/HomePage'
+import styles from '../styles/style.module.css'
 
-
-//const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
-    <main id="app_layout">
-      <Navbar />
+    <main className={styles.main}>
       <HomePage />
-      <Footer />
     </main>
   )
 }
