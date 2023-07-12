@@ -1,0 +1,45 @@
+/**
+Pages in their hierarchy
+app_layout
+    Navbar
+    Homepage
+    Portfolio
+    ContactUs
+    CompanyPortfolio
+    CompanyTeam
+
+    Font: Courier New
+    Background color: #e2e8f0
+    Font-color: black
+*/
+
+/*Defining colors for use in website*/
+$primary: #636365;
+$secondary: #89939e;
+$accent: #ffa62e;
+
+.main {}
+
+.homePage {
+  .container {
+    color: $primary;
+
+    #best-span {
+      background-color: linear-gradient(90deg,
+          rgba(99, 99, 101, 1) 0%,
+          rgba(137, 147, 158, 1) 50%,
+          rgba(255, 166, 46, 1) 100%);
+    }
+  }
+}
+
+.about {
+  .container .row {}
+}
+
+.portfolio .card-img-top {
+  width: 30;
+  height: fit-content;
+}
+
+/* check on how to arrange css files based on use! */

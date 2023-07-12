@@ -1,13 +1,10 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import HomePage from "../app/pages/home/page";
+import styles from "../public/assets/styles/page.module.scss"
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+export default function Page() {
+    return (
+        <main className={styles.main}>
+            <HomePage />
+        </main>
+    )
 }

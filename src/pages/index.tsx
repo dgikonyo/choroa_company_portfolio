@@ -1,16 +1,10 @@
-import HomePage from "@/pages/HomePage";
-import styles from "../styles/style.module.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import HomePage from "../app/pages/home/page";
+import styles from "../public/assets/styles/page.module.scss"
 
-export default function Home(): JSX.Element {
-  return (
-    <>
-      <Navbar />
-      <main className={styles.main}>
-        <HomePage />
-      </main>
-      <Footer />
-    </>
-  );
+export default function Page() {
+    return (
+        <main className={styles.main}>
+            <HomePage />
+        </main>
+    )
 }
