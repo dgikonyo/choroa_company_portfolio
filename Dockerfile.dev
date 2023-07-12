@@ -1,0 +1,18 @@
+#fetching the lastest node image on alpine linux
+FROM node:alpine AS development
+
+#declaring env
+ENV NODE_ENV development
+
+#setting up the work directory
+WORKDIR /choroa_company_portfolio
+
+#instlling dependencies
+COPY ./package.json /choroa_company_portfolio/
+RUN npm install
+
+#copying all the files in our project
+COPY . /choroa_company_portfolio/.
+
+#starting our application 
+CMD npm run start
