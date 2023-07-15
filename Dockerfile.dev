@@ -9,7 +9,7 @@ WORKDIR /choroa_company_portfolio
 
 #instlling dependencies
 COPY ./package.json /choroa_company_portfolio/
-RUN npm install
+RUN npm install, npm run build, npm run start
 
 #copying all the files in our project
 COPY . /choroa_company_portfolio/.
