@@ -13,20 +13,20 @@ export default function Page() {
                     </div>
                 </header> 
                 <div className="row mt-2 mb-5">
-                    <div className="col-md text-start">
+                    <div className="col-md col-xs-12">
                         <Link className="navbar-toggler " type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation" href="/about-us.html"><span
                                 className="navbar-toggler-icon"></span>DISCUSS THE PROJECT</Link>
                     </div>
-                    <div className="col-md text-end">
+                    <div className="col-md col-xs-12">
                         <Link className="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation" href="/pages/about"><span
                                 className="navbar-toggler-icon"></span>WHO ARE WE</Link>
                     </div>
                 </div>
-                <div className="row mt-2 mb-5">
+                <div className="row mt-2">
                     <div className="col-md">
                         <p>WE ARE THE LEADERS IN WEB & MOBILE DESIGN AND THE DEVELOPMENT INDUSTRY</p>
                     </div>

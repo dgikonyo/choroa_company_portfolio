@@ -54,13 +54,6 @@ export default function Page() {
                             <h3>EMAIL</h3>
                             <p>choroadesignstudios@email.com</p>
                         </div>
-                        <div>
-                            <h3>SOCIAL</h3>
-                            <ul>
-                                <li><a>Twitter</a></li>
-                                <li><a>LinkedIn</a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
 
@@ -70,10 +63,7 @@ export default function Page() {
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                             href="/pages/team"><span className="navbar-toggler-icon"></span>OUR TEAM</Link>
                     </div>
-                    <div className="col-md-2">
-                        <p>&copy;Choroa 2023</p>
-                    </div>
-                </div>
+                 </div>
             </div>
             {/* </div> */}
         </section>

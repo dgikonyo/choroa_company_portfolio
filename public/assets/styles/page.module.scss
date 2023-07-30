@@ -19,11 +19,9 @@ $secondary: #89939e;
 $accent: #ffa62e;
 
 .main {
-  border-radius: 30px;
-  // background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
-  // background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
-  background-blend-mode: multiply, multiply;
+  //for dark theme
+  // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+  // background-blend-mode: multiply, multiply;
 }
 
 .Navbar {
@@ -32,25 +30,51 @@ $accent: #ffa62e;
 }
 
 .homePage {
+  border-radius: 30px;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  padding: 30px;
   .container {
     color: $primary;
 
     #best-span {
-      background-color: linear-gradient(90deg,
-          rgba(99, 99, 101, 1) 0%,
-          rgba(137, 147, 158, 1) 50%,
-          rgba(255, 166, 46, 1) 100%);
+      background-color: linear-gradient(
+        90deg,
+        rgba(99, 99, 101, 1) 0%,
+        rgba(137, 147, 158, 1) 50%,
+        rgba(255, 166, 46, 1) 100%
+      );
     }
   }
 }
 
 .about {
-  .container .row {}
+  border-radius: 30px;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  padding: 30px;
+  .container .row {
+  }
 }
 
-.portfolio .card-img-top {
-  width: 30;
-  height: fit-content;
+.portfolio {
+  border-radius: 30px;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  padding: 30px;
+
+  .card-img-top {
+    width: 30;
+    height: fit-content;
+  }
 }
 
+.team {
+  border-radius: 30px;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  padding: 30px;
+}
+
+.contact {
+  border-radius: 30px;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  padding: 30px;
+}
 /* check on how to arrange css files based on use! */

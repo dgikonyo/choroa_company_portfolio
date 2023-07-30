@@ -20,7 +20,7 @@ export default function Page() {
                     <div className="col-md text-end">
                         <Link className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                            href="/pages/contactUs"><span className="navbar-toggler-icon"></span>CONTACT US</Link>
+                            href="/pages/contact"><span className="navbar-toggler-icon"></span>CONTACT US</Link>
                     </div>
                 </div>
             </div>
