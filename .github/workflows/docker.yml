@@ -29,9 +29,3 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
-    -
-      name: Deploy on github pages
-      uses: JamesIves/github-pages-deploy-action@4.1.0
-      with:
-        branch: main
-        folder: root
