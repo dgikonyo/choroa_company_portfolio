@@ -1,15 +1,12 @@
 {
   "name": "choroa_company_porfolio",
   "version": "0.1.0",
-  "homepage": "https://choroa-designs.github.io",
   "private": true,
   "scripts": {
-    "dev": "npm run dev",
-    "build": "npm run build",
-    "start": "npm run start",
-    "lint": "npm run lint",
-    "predeploy": "npm run build",
-    "deploy":"gh-pages -d build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
