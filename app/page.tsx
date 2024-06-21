@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <main className="main">
       <section className="hero-section">
-      <Navbar />
+        <Navbar />
         <div className="hero">
           <div className="container-fluid">
             <div className="row">
