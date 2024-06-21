@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../public/assets/styles/page.module.scss";
+import styles from "../../public/assets/styles/page.module.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -8,7 +8,7 @@ import { faEarthAfrica } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   return (
-    <section className={styles.Navbar}>
+    <section className="navbar-section">
       <nav className="navbar">
         <div className="container-fluid">
           <div className="col-xs-8">

@@ -1,10 +1,9 @@
-import styles from "../../public/assets/styles/page.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEarthAfrica } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
-    <section className={styles.footer}>
+    <section className="footer-section">
       <footer className="row py-3">
         <div className="col-md col-xs-12">
           <p className="text-center text-body-secondary">

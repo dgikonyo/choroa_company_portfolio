@@ -1,19 +1,103 @@
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-} */
-@media (prefers-color-scheme: dark) {
-  /* :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  } */
+/*Defining colors for use in website*/
+:root {
+  color-scheme: light dark;
+
+  --light-background: #f0f0f0;
+  /* Light background color */
+  --light-primary: #636365;
+  /* Light primary color */
+  --light-secondary: #89939e;
+  /* Light secondary color */
+  --light-accent: #ffa62e;
+  /* Light accent color */
+
+  --dark-background: #1f1f21;
+  /* Dark background color */
+  --dark-primary: #ffffff;
+  /* Dark text color */
+  --dark-secondary: #5f6a78;
+  /* Dark secondary color */
+  --dark-accent: #e69200;
+  /* Dark accent color */
+}
+
+* {
+  background-color: light-dark(var(--light-background), var(--dark-background));
+  color: light-dark(var(--light-primary), var(--dark-primary));
 }
 
 body {
+  background-color: var(--light-background);
+  color: var(--light-primary);
   font-family: "Lucida Console", "Courier New", monospace;
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
+
+a {
+  color: var(--accent-color);
+  /* Use light accent color for links */
+}
+
+.light {
+  /* forces light color-scheme */
+  color-scheme: light;
+}
+
+.dark {
+  /* forces dark color-scheme */
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-background);
+    /* Use dark background color */
+    color: var(--dark-primary);
+    /* Use dark text color */
+  }
+
+  a {
+    color: var(--dark-accent);
+    /* Use dark accent color for links in dark mode */
+  }
+}
+
+/* BODY START */
+
+/* HERO SECTION START */
+.hero-section {
+
+  .hero-main-text {
+    padding-bottom: 200px;
+  }
+
+  .hero-text {
+    position: relative;
+
+    .text-paragraph {
+      position: absolute;
+      right: 0;
+      width: 50%;
+      padding: 20px;
+    }
+  }
+}
+
+/* RESPONSIVENESS */
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .text-paragraph {
+    position: static;
+    /* Reset position for small screens */
+    width: auto;
+    /* Reset width for small screens */
+    padding: 10px;
+    /* Adjust padding for small screens */
+  }
+}
+
+/* HERO SECTION END */
+
+/* BODY END */
