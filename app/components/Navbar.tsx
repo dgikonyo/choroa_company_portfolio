@@ -12,16 +12,8 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="container-fluid">
           <div className="col-xs-8">
-            <Link className="navbar-brand" href="/">
-              <Image
-                src="/assets/img/logo/svg/logo-no-background.svg"
-                alt="Choroa Design Studios"
-                width={92}
-                height={30}
-                className="d-inline-block align-text-top"
-                quality={100}
-              ></Image>
-            </Link>
+            <p className="navbar-brand" href="/">Choroa
+            </p>
           </div>
           <div className="col-xs-4">
             <ul className="nav">
@@ -32,8 +24,8 @@ export default function Navbar() {
                 >
                   <span>
                     <FontAwesomeIcon
+                      className="nav-icon"
                       icon={faLinkedin}
-                      style={{ color: "#636365" }}
                       size="2xl"
                       shake
                     />
@@ -47,8 +39,8 @@ export default function Navbar() {
                 >
                   <span>
                     <FontAwesomeIcon
+                      className="nav-icon"
                       icon={faGithub}
-                      style={{ color: "#636365" }}
                       size="2xl"
                       spinPulse
                     />
