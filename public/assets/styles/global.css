@@ -1,7 +1,6 @@
 /*Defining colors for use in website*/
 :root {
   color-scheme: light dark;
-
   --light-background: #f0f0f0;
   /* Light background color */
   --light-primary: #636365;
@@ -19,6 +18,21 @@
   /* Dark secondary color */
   --dark-accent: #e69200;
   /* Dark accent color */
+
+  /* font sizes */
+  --desktop-title-text-size: 70px;
+  --desktop-secondary-text-size: 24px;
+  --desktop-body-text-size: 18px;
+
+  --laptop-title-text-size: 50px;
+  --laptop-secondary-text-size: 24px;
+  --laptop-body-text-size: 18px;
+
+  --tablet-title-text-size: 45px;
+
+  --mobile-title-size: 50px;
+  --mobile-secondary-size: 20px;
+  --mobile-body-text-size: 18px;
 }
 
 /** {
@@ -26,19 +40,25 @@
   color: light-dark(var(--light-primary), var(--dark-primary));
 }
 */
+
+* {
+  max-width: 100%;
+}
+
 body {
   background-color: light-dark(var(--light-background), var(--dark-background));
   color: light-dark(var(--light-primary), var(--dark-primary));
   color: var(--light-primary);
   font-family: "Lato", sans-serif;
-  max-width: 1000px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--light-secondary);
   /* Use light accent color for links */
+  text-decoration: none;
 }
 
 .light {
@@ -55,7 +75,8 @@ a {
   body {
     background-color: var(--dark-background);
     /* Use dark background color */
-    color: var(--dark-primary);
+    color: var(--dark-secondary);
+    font-weight: 400;
     /* Use dark text color */
   }
 
@@ -68,35 +89,56 @@ a {
 /* BODY START */
 
 /* NAVBAR START */
-  
+.navbar-section {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navheading {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--light-accent);
+
+    .navHeading-main {
+      font-size: 30px;
+      font-weight: bold;
+      color: var(--light-primary);
+    }
+  }
+
+  .nav-item {
+    margin: 10px;
+  }
+}
+
 /* NAVBAR END */
 
 /* HERO SECTION START */
 .hero-section {
-  background-image:     linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ), url("/assets/img/hero-neon.jpg");
-/*  width: 100%;*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/img/hero-neon.jpg");
   height: 500px;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 30px 30px 0px 0px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 10px 25px;
+  margin: 0px 25px 10px;
   color: var(--dark-primary);
   margin-bottom: 50px;
 
   .hero {
     margin-left: 20px;
-    margin-right:20px;
+    margin-right: 20px;
   }
 
   .hero-main-text {
-    font-size: 48px;
     font-weight: 800;
     margin-top: 20px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 
   .hero-text {
@@ -106,18 +148,19 @@ a {
       position: absolute;
       right: 0;
       width: 60%;
-      font-size: 20px;
+      font-size: var(--desktop-secondary-text-size);
       font-weight: 600;
     }
   }
 }
+
 /* HERO SECTION END */
 
 /* ABOUT US SECTION START */
 .about-us-section {
   margin: 10px 25px;
 
-  .about-us-main {    
+  .about-us-main {
     .about-us-title {
       border-bottom: 1px solid;
       margin-bottom: 40px;
@@ -131,7 +174,7 @@ a {
 
     .about-us-description {
       text-align: center;
-      width: 70%;
+      width: 80%;
       margin-left: auto;
       margin-right: auto;
 
@@ -144,18 +187,70 @@ a {
 
 /* ABOUT US SECTION END */
 
- @media (min-width: 319px) and (max-width: 480px) {
+/* CONTACT US SECTION START */
+.contact-us-section {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  margin-bottom: 25px;
 
+  .items {
+    margin-left: auto;
+    margin-right: auto;
+
+
+    .item {
+      align-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+  }
+}
+
+/* CONTACT US SECTION END */
+
+/* FOOTER SECTION START */
+.footer-section {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* FOOTER SECTION END */
+
+/* SMART PHONES */
+@media (min-width: 319px) and (max-width: 480px) {
+
+  /* NAVBAR START */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  /* NAVBAR END */
   /* HERO SECTION START */
   .hero-section {
-    margin: 5px 10px;
+    margin: 0px 10px 5px;
     height: 500px;
-   
 
     .hero-main-text {
-      font-size:35px;
       text-align: center;
       padding-bottom: 15px;
+
+      p {
+        font-size: var(--mobile-title-size);
+        font-weight: 800;
+      }
     }
 
     .hero-text {
@@ -163,42 +258,132 @@ a {
 
       .text-paragraph {
         position: absolute;
-        font-size: 20px;
+        font-size: var(--mobile-secondary-size);
         text-align: center;
         width: 100%;
       }
     }
   }
- }
+
+  /* HERO SECTION END */
+
+  /* ABOUT US SECTION START */
+  .about-us-section {
+    margin: 10px 20px 10px;
+
+    .about-us-main {
+      .about-us-title {
+        text-align: center;
+
+        .title {
+          font-size: var(--mobile-secondary-size);
+          font-weight: 800;
+        }
+      }
+
+      .about-us-description {
+        text-align: center;
+
+        .description {
+          font-size: var(--mobile-body-text-size);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  /* ABOUT US SECTION END */
+
+  /* CONTACT US SECTION START */
+  .contact-us-section {
+    width: 70%;
+  }
+
+  /* CONTACT US SECTION END */
+}
 
 /* tablets */
 @media (min-width: 481px) and (max-width: 1200px) {
+
+  /* NAVBAR START */
+  .nav {
+    display: flex;
+  }
+
+  .nav-item {
+    margin-right: 20px;
+  }
+
+  /* NAVBAR END */
+
+  /* HERO SECTION START */
   .hero-section {
     height: 500px;
 
+    .hero {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
     .hero-main-text {
-      font-size: 40px;
+      font-size: var(--tablet-title-text-size);
       font-weight: 800;
       margin-top: 20px;
-      padding-bottom: 100px;
+      padding-bottom: 50px;
     }
 
     .hero-text {
       .text-paragraph {
         width: 100%;
+        font-size: var(--laptop-secondary-text-size);
       }
     }
   }
+
+  /* HERO SECTION END */
+
+  /* ABOUT US START */
+  .about-us-section {
+    .about-us-main {
+      .about-us-title {
+        .title {
+          font-size: var(--tablet-title-text-size);
+        }
+      }
+    }
+  }
+
+  /* ABOUT US END */
+
+  /* CONTACT US START */
+  .contact-us-section {
+    width: 50%;
+  }
+
+  /* CONTACT US END */
 }
 
 /* laptops */
 @media (min-width: 319px) and (max-width: 480px) {
-  
- }
+  .hero-section {
+    .hero-main-text {
+      font-size: var(--laptop-title-text-size);
+    }
+  }
+}
 
 /* desktops */
- @media (min-width: 1201px) and (max-width: 1600px) {}
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .hero-section {
+    .hero-main-text {
+      font-size: var(--desktop-title-text-size);
+    }
+  }
 
+  .contact-us-section {
+    max-width: 300px;
+  }
+}
 
 /* RESPONSIVENESS */
 /* Responsive adjustments */
@@ -211,7 +396,10 @@ a {
     padding: 10px;
     /* Adjust padding for small screens */
   }
-}
 
+  .contact-us-section {
+    max-width: 300px;
+  }
+}
 
 /* BODY END */

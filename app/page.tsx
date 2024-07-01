@@ -1,12 +1,54 @@
-import Navbar from "./components/Navbar";
+"use client";
+
 import Footer from "./components/Footer";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEarthAfrica, faLink } from "@fortawesome/free-solid-svg-icons";
+import { useRef } from "react";
 
 export default function Page() {
+  const targetDivRef = useRef<HTMLDivElement>(null);
+
+  function scrollToDiv(targetDivRef: any): any {
+    if (targetDivRef.current) {
+      targetDivRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <main className="main">
+      <section className="navbar-section">
+        <nav className="navbar">
+          <div className="container-fluid">
+            <div className="col-xs-8">
+              <a href="#hero">
+                <p className="navheading">
+                  <span className="navHeading-main">choroa</span> <br></br>{" "}
+                  DESIGN STUDIOS
+                </p>
+              </a>
+            </div>
+            <div className="col-xs-4">
+              <ul className="nav">
+                <li className="nav-item">
+                  <a href="#about" onClick={scrollToDiv(targetDivRef)}>
+                    What We Do
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#contact" onClick={scrollToDiv(targetDivRef)}>
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
       <section className="hero-section">
-        <Navbar />
-        <div className="hero">
+        <div className="hero" id="hero" ref={targetDivRef}>
           <div className="container-fluid">
             <div className="row">
               <div className="hero-main-text col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -27,8 +69,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="about-us-section">
-        <div className="about-us-main">
+      <section className="about-us-section" id="about">
+        <div className="about-us-main" id="about" ref={targetDivRef}>
           <div className="container-fluid">
             <div className="row">
               <div className="about-us-title col-12">
@@ -38,16 +80,61 @@ export default function Page() {
             <div className="row">
               <div className="about-us-description col-12">
                 <p className="description">
-                  We are passionate builders crafting the future, project by innovative project.
+                  We are passionate builders crafting the future, project by
+                  innovative project.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="projects"></section>
-      <section className="contact-us"></section>
-      {/* <Footer /> */}
+      <section className="contact-us-section" id="contact" ref={targetDivRef}>
+        <div className="items row">
+          <div className="item col-3">
+            <Link
+              href="https://www.linkedin.com/in/gikonyo-kimani-05328211b/"
+              className="nav-link text-body-secondary"
+            >
+              <span>
+                <FontAwesomeIcon
+                  className="nav-icon"
+                  icon={faLinkedin}
+                  size="2xl"
+                />
+              </span>
+            </Link>
+          </div>
+
+          <div className="item col-3">
+            <Link
+              href="https://github.com/dgikonyo"
+              className="nav-link text-body-secondary"
+            >
+              <span>
+                <FontAwesomeIcon
+                  className="nav-icon"
+                  icon={faGithub}
+                  size="2xl"
+                  spinPulse
+                />
+              </span>
+            </Link>
+          </div>
+
+          <div className="item col-3">
+            <Link href="https://upwork.com/en-gb/freelancers/~0177ec5f229f345379">
+              <span className="upwork-link">
+                <FontAwesomeIcon
+                  className="nav-icon"
+                  icon={faLink}
+                  size="2xl"
+                />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </main>
   );
 }
