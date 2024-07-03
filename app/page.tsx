@@ -6,17 +6,33 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEarthAfrica, faLink } from "@fortawesome/free-solid-svg-icons";
-import { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function Page() {
   const targetDivRef = useRef<HTMLDivElement>(null);
 
-  function scrollToDiv(targetDivRef: any): any {
+  const scrollToDiv = (targetDivRef: React.RefObject<HTMLDivElement>) => {
     if (targetDivRef.current) {
       targetDivRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
+  useEffect(() => {
+    const handleHasChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const targetElement = document.querySelector(hash);
+
+        if (targetElement) {
+          scrollToDiv(targetDivRef);
+        }
+      }
+    };
+
+    window.addEventListener("hashchange", handleHasChange);
+
+    return () => window.removeEventListener("hashchange", handleHasChange);
+  });
   return (
     <main className="main">
       <section className="navbar-section">
@@ -33,14 +49,10 @@ export default function Page() {
             <div className="col-xs-4">
               <ul className="nav">
                 <li className="nav-item">
-                  <a href="#about" onClick={scrollToDiv(targetDivRef)}>
-                    What We Do
-                  </a>
+                  <Link href="#about">What We Do</Link>
                 </li>
                 <li className="nav-item">
-                  <a href="#contact" onClick={scrollToDiv(targetDivRef)}>
-                    Contact Us
-                  </a>
+                  <Link href="#contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
