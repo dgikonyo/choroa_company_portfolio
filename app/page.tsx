@@ -40,7 +40,7 @@ function useTheme(initial = "dark") {
  * Returns a handler you can attach to <a> tags that link to anchors.
  */
 function useSmoothScroll() {
-  const handleAnchorClick = useCallback((e) => {
+  const handleAnchorClick = useCallback((e: any) => {
     const href = e.currentTarget.getAttribute("href") || "";
     if (!href.startsWith("#")) return;
     e.preventDefault();
@@ -62,7 +62,7 @@ function useSmoothScroll() {
  * Usage: pass the event object from onClick to animatePress(e)
  */
 function usePressAnimation() {
-  const animatePress = useCallback((e) => {
+  const animatePress = useCallback((e: any) => {
     const el = e.currentTarget;
     // don't animate mailto links
     const href = el.getAttribute("href") || "";
@@ -86,7 +86,7 @@ export default function Page() {
 
   // common props for anchor buttons that should animate and maybe smooth scroll
   const anchorButtonProps = {
-    onClick: (e) => {
+    onClick: (e: any) => {
       animatePress(e);
       // if it's an anchor hash, also do smooth scroll
       if ((e.currentTarget.getAttribute("href") || "").startsWith("#")) {
