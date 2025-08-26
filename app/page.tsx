@@ -318,7 +318,7 @@ export default function Page() {
           <h2 className="section-title mb-4">Have an idea?</h2>
           <p className="section-description mb-8">Let's talk about how we can work together to build something amazing. We're always excited to hear about new and ambitious projects.</p>
           <a
-            href="mailto:hello@choroaDesignStudios.com"
+            href="mailto:choroaenterprises@gmail.com"
             className="btn btn-primary"
             style={{ fontSize: "20px", padding: "20px 40px" }}
             onClick={(e) => animatePress(e)}
